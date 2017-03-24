@@ -15,9 +15,17 @@ import json
 with open('ma-en.json') as json_data:
     ma_en_dict = json.load(json_data)
 
-ma_word = input("Word in Malagasy: ")
-en_word = ma_en_dict[ma_word]
-print ("En: ", en_word)
+while True:
+    ma_word = input("Word in Malagasy: ")
+    if ma_word == "veloma":
+        break
+    try:
+        en_word = ma_en_dict[ma_word]
+        print ("En: ", en_word)		
+    except:
+        print("this word is not in the database")
+
+
 
 print("Veloma! Goodbye!")
 
