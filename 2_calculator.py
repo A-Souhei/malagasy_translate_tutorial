@@ -13,11 +13,20 @@ Exercise:
 
 def add_two_numbers(x,y):
     """ Adds two numbers """
-    return float(x) + float(y)
+    return x + y
 
 def subtract_two_numbers(x,y):
     """ subtract two numbers """
-    return float(x) - float(y)
+    return x - y
+	
+def multiply_two_numbers(x,y):
+	return x * y	
+
+def divide_two_numbers(x,y):
+	if y == 0:
+		return "error"
+	else:
+		return x / y;
 
 #Greeting
 print("Hello! This is a simple program for simple calculations")
@@ -25,17 +34,23 @@ print("Hello! This is a simple program for simple calculations")
 #Specify operation
 print('\x1b[1;31m'+"What would you like to do today?"+'\x1b[0m')
 #doToday = "add" #HACK
-doToday = input("add for addition \nsubs for substraction\noperation:")
+doToday = input("add for addition \nsubs for substraction\nmult for multiplication\ndivide for division\noperation:")
 print("We will " + doToday + " two numbers now.")
 
-var1 = input("First number: ")
-var2 = input("Second number: ")
+var01 = input("First number: ")
+var02 = input("Second number: ")
+var1=float(var01)
+var2=float(var02)
 
 if doToday=="add":
     result = add_two_numbers(var1, var2)
-else:
+elif doToday == "subs":
 	result = subtract_two_numbers(var1 , var2)
-
+elif doToday == "mult":
+	result = multiply_two_numbers(var1 , var2)
+else:
+	result = divide_two_numbers(var1 , var2)	
+	
 print("This is the result:", result)
 print("I hope it is correct...")
 print("Bye, now!")
