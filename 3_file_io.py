@@ -9,15 +9,16 @@ To write something to a file you can use following code:
     f.close()
 
 """
-
-
-meerkat_file = open('meerkats.txt', 'r')
-lastLine = ""
-for line in meerkat_file:
-	lastLine = line
-print(lastLine)	
-meerkat_file.close()	
-f = open('last_meerkat.txt' , 'w')	
-f.write(lastLine + '\n')
-f.close()
-
+n = sum(1 for line in open("meerkats.txt")) - 1
+l = '';
+fp = open("meerkats.txt")
+for i, line in enumerate(fp):
+    if i == n:
+        print(line)
+        l = line
+    else:
+        continue
+fp.close()
+f = open('last_meerkat.txt','w')
+f.write(l + '\n')
+f. close()
