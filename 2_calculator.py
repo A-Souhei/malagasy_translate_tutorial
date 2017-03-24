@@ -11,11 +11,11 @@ Exercise:
 """
 def add_two_numbers(x,y):
     """ Adds two numbers """
-    return x + y
+    return float(x) + float(y)
 
 def subtract_two_numbers(x,y):
     """ subtract two numbers """
-    return x - y
+    return float(x) - float(y)
 
 #Greeting
 print("Hello! This is a simple program for simple calculations")
