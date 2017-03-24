@@ -15,6 +15,7 @@ meerkat_file = open('meerkats.txt', 'r')
 lastLine = ""
 for line in meerkat_file:
 	lastLine = line
+print(lastLine)	
 meerkat_file.close()	
 f = open('last_meerkat.txt' , 'w')	
 f.write(lastLine + '\n')
